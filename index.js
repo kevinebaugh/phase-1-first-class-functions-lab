@@ -30,15 +30,17 @@ function createFareMultiplier(multiplier) {
 // fareDoubler() — Declare a variable with const and assign a function returned by createFareMultiplier() to it. Invoke
 // createFareMultiplier() in such a way that the new fareDoubler() function accepts a fare as its lone argument and doubles it.
 
-const fareDoubler = function(fare) {
-  return createFareMultiplier(2)
-}
+const fareDoubler = createFareMultiplier(2)
 
 // fareTripler() — Declare a variable with const and assign a function returned by createFareMultiplier() to it. Invoke
 // createFareMultiplier() in such a way that the new fareTripler() function accepts a fare as its lone argument and triples it.
 
-const fareTripler = function(fare) {
-  return createFareMultiplier(3)
+const fareTripler = createFareMultiplier(3)
+
+// same as:
+
+const fareTripler2 = function(fare) {
+  return fare * 3
 }
 
 // selectDifferentDrivers() — This function takes two arguments, an array of drivers and either the returnFirstTwoDrivers() or returnLastTwoDrivers
